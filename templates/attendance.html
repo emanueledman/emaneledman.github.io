@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Marcar Presença - Turbo Docs Web</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <style>
+        body {
+            background-color: #3498db; /* Cor azul */
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column; /* Ajuste para centralizar verticalmente */
+            color: white; /* Cor do texto */
+        }
+        .container {
+            text-align: center;
+        }
+        #attendanceForm {
+            background: rgba(255, 255, 255, 0.8); /* Fundo branco com transparência */
+            padding: 20px;
+            border-radius: 8px;
+        }
+        #attendanceForm label {
+            display: block;
+            margin-bottom: 10px;
+        }
+        #attendanceForm input[type="email"] {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 10px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            font-size: 16px;
+        }
+        #attendanceForm button {
+            background-color: #4CAF50; /* Cor de fundo verde */
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        #attendanceForm button:hover {
+            background-color: #45a049; /* Cor de fundo verde mais escura ao passar o mouse */
+        }
+    </style>
+</head>
+<body>
+    <h1 style="margin-bottom: 20px;">Marcar Presença - Turbo Docs Web</h1> <!-- Título acima do formulário de presença -->
+
+    <div class="container">
+        <form id="attendanceForm" method="POST" action="/attendance">
+            <label for="email">Marque sua presença:</label>
+            <input type="email" id="email" name="email" required>
+            <button type="submit">Enviar</button>
+        </form>
+    </div>
+</body>
+</html>

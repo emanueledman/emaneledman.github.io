@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lista de Usuários - Turbo Docs Web</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        body {
+            padding: 20px;
+        }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        h1 {
+            margin-bottom: 20px;
+        }
+        .list-group-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .list-group-item .btn {
+            margin-left: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Lista de Usuários</h1>
+        <div class="list-group">
+            {% for user in users %}
+            <div class="list-group-item">
+                <div>
+                    <h5 class="mb-1">{{ user.name }}</h5>
+                    <small>{{ user.email }}</small>
+                </div>
+                <a href="#" class="btn btn-primary">Convidar para a Reunião</a>
+            </div>
+            {% endfor %}
+        </div>
+        <p><a href="/">Voltar para a página inicial</a></p>
+    </div>
+</body>
+</html>
